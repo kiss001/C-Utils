@@ -1,2 +1,4 @@
 # C++-Utils
-One C++ utils packages, the API styles from java API
+一个C++常用功能库封装：
+1. 面向非C++11标准
+2. 包含非C++11版本的智能指针
