@@ -1,0 +1,2 @@
+# 设置编译器
+# set(CMAKE_CXX_COMPILER XXX)
