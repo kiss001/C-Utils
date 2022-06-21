@@ -1,3 +1,13 @@
+/**
+ * @file task_queue.h
+ * @author your name (you@domain.com)
+ * @brief  任务队列，执行各种类型的任务。属于TaskPool类的一部分
+ * @version 0.1
+ * @date 2022-06-09
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #ifndef BASE_INCLUDE_TASKQUEUE_H
 #define BASE_INCLUDE_TASKQUEUE_H
 

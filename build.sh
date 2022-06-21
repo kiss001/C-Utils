@@ -20,3 +20,5 @@ cmake .. \
 
 # 执行makefile
 make
+
+# 打包文件

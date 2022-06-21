@@ -17,8 +17,10 @@ public:
         return _s_instance;
     }
     static void release() {
-        delete _s_instance;
-        _s_instance = NULL;
+        if (_s_instance != NULL) {
+            delete _s_instance;
+            _s_instance = NULL;
+        }
     }
 
 protected:

@@ -21,8 +21,7 @@
 
 typedef bool boolean;
 
-typedef std::string String;
-typedef std::vector<String> StringVector;
+typedef std::vector<std::string> StringVector;
 
 typedef UniquePtr<uint8_t[]> ByteArray;
 typedef UniquePtr<uint32_t[]> WordArray;

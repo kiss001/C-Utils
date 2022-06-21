@@ -24,26 +24,12 @@ class TimerTask;
 
 typedef RtnCode (*TimerHandler)(void*);
 
-typedef enum {
-    TTI_MIN = 0,
-    TTI_TEST,
-    TTI_PM_CTL, 
-    TTI_CRL,
-    TTI_CM_EXPIRE,
-    TTI_CM_DATA_REFRESH,
-    TTI_CM_DISK_REFRESH,
-    TTI_CM_DELETE_REFRESH,
-    TTI_CM_IMPORT_REFRESH,
-    TTI_CM_PULL_CERT_REFRESH,
-    TTI_CM_LOAD_REFRESH,
-    TTI_CM_STORE_LOAD_REFRESH,
-    TTI_CM_REGION_DELETE,
-    TTI_CM_REGION_SYNC,
-    TTI_TRMS_DATA_REFRESH,
-    TTI_TRMS_CARID,
-    TTI_LOG_DEL,
-    TTI_MAX,
-} TimerTaskId;
+// 每个应用程序自己进行定义，不放在这个工具库中
+// typedef enum {
+//     TTI_MIN = 0,
+//     TTI_RULE_MGR_REQUEST_RULE, // 规则管理模块从云端获取安全规则
+//     TTI_MAX,
+// } TimerTaskId;
 
 typedef struct {
     bool once;

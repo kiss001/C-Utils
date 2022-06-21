@@ -23,9 +23,14 @@ message(STATUS "c++ flags, Release Configuration: ${CMAKE_CXX_FLAGS_RELEASE}")
 ############# 以下是编译过程 #############
 # 设置变量
 set(ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+set(THIRD_TOOLS_DIR ${ROOT_DIR}/third_tools)  # 第三方依赖库目录
 
 # 增加子CMAKE_LIST.txt
 add_subdirectory(utils)
+
+add_subdirectory(socrule)               # 用于安全规则系统
+
+add_subdirectory(device_info)           # 用于安全规则系统
 
 ############# 以下是测试过程 #############
 # 启动单元测试
@@ -34,7 +39,7 @@ enable_testing()
 # 增加测试用例
 add_test(
     NAME utils_test
-    COMMAND ${ROOT_DIR}/lib/utils/test/utils_test
+    COMMAND ${ROOT_DIR}/test/utils/utils_test
 )
 
 # 设置测试用例时间

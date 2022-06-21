@@ -3,8 +3,8 @@
 #include <vector>
 #include <iostream>
 #include <dirent.h>
-#include "buffer.h"
 
+#include "buffer.h"
 #include "types.h"
 
 // namespace scss {
@@ -30,7 +30,7 @@ public:
     static bool create_dir(const std::string& whole);
     static bool is_dir_exist(const std::string& file);
     static bool remove_dir(const std::string& dir);
-    static bool remove_not_empty_dir(const std::string& dir);
+    static bool remove_not_empty_dir(const std::string& dir, bool delete_root_dir = true);
 
     /*get names of all files in the folder and store into vector*/
     static bool list_files_under_dir(const std::string& dirpath, std::vector<std::string>& files);

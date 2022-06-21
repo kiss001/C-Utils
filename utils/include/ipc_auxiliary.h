@@ -37,9 +37,10 @@ typedef RtnCode (*MsgHandler)(const uint8_t* recv_msg, uint32_t recv_msg_len,
         ByteArray& rsp_msg, uint32_t& rsp_msg_len);
 typedef MsgHandler RequestHandler;
 
+// 本类服务端和客户端是配套使用的。
 class IpcAuxiliary : public Singleton<IpcAuxiliary> {
 public:
-    // 服务启动和停止，服务启动和停止，应该主线程中完成。
+    // 作为服务端：服务启动和停止，服务启动和停止，应该主线程中完成。
     RtnCode service_start();
     void server_stop();
 
@@ -50,7 +51,7 @@ public:
     // 注册各个模块的回调函数。
     void regist_request_handler(RpcSduType sdu_type, RequestHandler request_handle_cb);
 
-    // 客户端发送消息，调用者应该是在一个独立的线程中完成。
+    // 作为客户端：客户端发送消息，调用者应该是在一个独立的线程中完成。
     RtnCode client_2_server(RpcSduType sdu_type, const uint8_t* req_msg, uint32_t req_msg_len, 
                     ByteArray& rsp_msg, uint32_t& rsp_msg_len);
 
